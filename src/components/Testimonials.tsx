@@ -6,7 +6,7 @@ export default function Testimonials() {
         role: "Mountain Biking Enthusiast",
         content:
           "The Mountain Explorer Pro has completely transformed my trail riding experience. The quality and performance are unmatched!",
-        avatar: "/placeholder.svg",
+        avatar: "/customers/customer-1.webp",
       },
       {
         id: 2,
@@ -14,7 +14,7 @@ export default function Testimonials() {
         role: "Daily Commuter",
         content:
           "I've been using the Urban Glide for my daily commute for 6 months now. It's comfortable, reliable, and the customer service at BikeHub is exceptional.",
-        avatar: "/placeholder.svg",
+        avatar: "/customers/customer-2.webp",
       },
       {
         id: 3,
@@ -22,7 +22,7 @@ export default function Testimonials() {
         role: "Professional Cyclist",
         content:
           "As someone who rides professionally, I'm extremely picky about my equipment. BikeHub consistently delivers top-notch products that meet my high standards.",
-        avatar: "/placeholder.svg",
+        avatar: "/customers/customer-1.webp",
       },
     ]
   
