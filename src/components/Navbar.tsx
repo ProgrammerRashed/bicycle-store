@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ShoppingCart, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
+import CartDropdown from "@/components/CartDropdown"
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname() 
@@ -35,19 +35,17 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden md:flex items-center">
-            <Button variant="outline" size="sm" className="mr-2">
-              <ShoppingCart className="h-4 w-4 mr-2" />
-              Cart
-            </Button>
-            <Button variant="default" size="sm">
+            <CartDropdown />
+            <Button variant="default" size="sm" className="ml-2">
               <User className="h-4 w-4 mr-2" />
               Login
             </Button>
           </div>
           <div className="flex items-center md:hidden">
+            <CartDropdown />
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary ml-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
