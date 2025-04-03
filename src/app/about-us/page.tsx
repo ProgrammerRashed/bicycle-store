@@ -21,7 +21,7 @@ const AboutUsPage = () => {
             and inspire more people to embrace cycling in their daily lives.
           </p>
           <Button size="lg" asChild>
-            <a href="/bicycles">Explore Our Collection</a>
+            <a href="/products">Explore Our Collection</a>
           </Button>
         </div>
         <div className="relative h-[400px] rounded-lg overflow-hidden">

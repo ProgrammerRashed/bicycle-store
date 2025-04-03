@@ -31,27 +31,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Shop</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/bicycles?category=mountain" className="text-gray-400 hover:text-white">
+                <Link href="/products?category=mountain" className="text-gray-400 hover:text-white">
                   Mountain Bikes
                 </Link>
               </li>
               <li>
-                <Link href="/bicycles?category=road" className="text-gray-400 hover:text-white">
+                <Link href="/products?category=road" className="text-gray-400 hover:text-white">
                   Road Bikes
                 </Link>
               </li>
               <li>
-                <Link href="/bicycles?category=commuter" className="text-gray-400 hover:text-white">
+                <Link href="/products?category=commuter" className="text-gray-400 hover:text-white">
                   Commuter Bikes
                 </Link>
               </li>
               <li>
-                <Link href="/bicycles?category=kids" className="text-gray-400 hover:text-white">
+                <Link href="/products?category=kids" className="text-gray-400 hover:text-white">
                   Kids Bikes
                 </Link>
               </li>
               <li>
-                <Link href="/bicycles?category=electric" className="text-gray-400 hover:text-white">
+                <Link href="/products?category=electric" className="text-gray-400 hover:text-white">
                   Electric Bikes
                 </Link>
               </li>

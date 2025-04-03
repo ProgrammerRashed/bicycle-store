@@ -12,7 +12,7 @@ const bannerItems = [
     description: "Explore the wilderness with our high-performance mountain bikes",
     image: "/banner-1.webp",
     cta: "Shop Mountain Bikes",
-    link: "/bicycles?category=mountain",
+    link: "/products?category=mountain",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const bannerItems = [
     description: "Stylish and practical bikes for your daily commute",
     image: "/banner-2.webp",
     cta: "Shop Commuter Bikes",
-    link: "/bicycles?category=commuter",
+    link: "/products?category=commuter",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const bannerItems = [
     description: "Get 20% off on all kids bikes this month",
     image: "/banner-3.webp",
     cta: "Shop Kids Bikes",
-    link: "/bicycles?category=kids",
+    link: "/products?category=kids",
   },
 ]
 
