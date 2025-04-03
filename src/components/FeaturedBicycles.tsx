@@ -1,9 +1,8 @@
 "use client"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import BicycleCard from "./BicycleCard"
+
 
 // Mock data for featured bicycles
 const featuredBicycles = [
@@ -76,31 +75,7 @@ export default function FeaturedBicycles() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredBicycles.map((bicycle) => (
-            <Card key={bicycle.id} className="overflow-hidden p-0 gap-0">
-              <div className="relative h-full min-h-56 w-full">
-                <Image src={bicycle.image || "/products/product-1.webp"} alt={bicycle.name} fill className="h-full w-full object-cover" />
-              </div>
-              <CardHeader className="p-4">
-                <div className="flex justify-between items-start">
-                  <CardTitle className="text-lg">{bicycle.name}</CardTitle>
-                  <Badge variant={bicycle.inStock ? "default" : "destructive"}>
-                    {bicycle.inStock ? "In Stock" : "Out of Stock"}
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="p-4 pt-0">
-                <div className="flex justify-between text-sm text-gray-500 mb-2">
-                  <span>{bicycle.brand}</span>
-                  <span>{bicycle.category}</span>
-                </div>
-                <p className="text-xl font-bold">${bicycle.price.toFixed(2)}</p>
-              </CardContent>
-              <CardFooter className="p-4 pt-0">
-                <Button className="w-full" asChild>
-                  <Link href={`/products/${bicycle.id}`}>View Details</Link>
-                </Button>
-              </CardFooter>
-            </Card>
+           <BicycleCard key={bicycle.id} bicycle={bicycle} />
           ))}
         </div>
       </div>
