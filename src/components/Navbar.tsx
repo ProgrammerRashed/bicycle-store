@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <Image src="/placeholder.svg" alt="Bicycle Store Logo" width={40} height={40} className="h-10 w-auto" />
+              <Image src="/logo.png" alt="Bicycle Store Logo" width={40} height={40} className="h-10 w-auto" />
               <span className="ml-2 text-xl font-bold text-primary">BikeHub</span>
             </Link>
             <div className="hidden md:ml-6 md:flex md:space-x-8">
@@ -26,13 +26,13 @@ export default function Navbar() {
                 Home
               </Link>
               <Link
-                href="/bicycles"
+                href="/products"
                 className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 All Bicycles
               </Link>
               <Link
-                href="/about"
+                href="/about-us"
                 className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 About
@@ -77,13 +77,13 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/bicycles"
+              href="/products"
               className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
             >
               All Bicycles
             </Link>
             <Link
-              href="/about"
+              href="/about-us"
               className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
             >
               About
