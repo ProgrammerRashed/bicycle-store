@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bicycle Store || Homepage",
-  description: "Get your first bicycle at a resonable price",
+  title: "BikeHub - Premium Bicycle Store",
+  description: "Your premier destination for quality bicycles and accessories",
 };
 
 export default function RootLayout({
