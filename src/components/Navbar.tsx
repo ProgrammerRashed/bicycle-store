@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ShoppingCart, User } from "lucide-react"
@@ -8,6 +9,9 @@ import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname() 
+
+  const isActive = (path : string) => pathname === path ? "border-primary text-primary" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
 
   return (
     <nav className="bg-white border-b sticky top-0 z-50">
@@ -19,22 +23,13 @@ export default function Navbar() {
               <span className="ml-2 text-xl font-bold text-primary">BikeHub</span>
             </Link>
             <div className="hidden md:ml-6 md:flex md:space-x-8">
-              <Link
-                href="/"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-primary text-sm font-medium"
-              >
+              <Link href="/" className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive("/")}`}>
                 Home
               </Link>
-              <Link
-                href="/products"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
+              <Link href="/products" className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive("/products")}`}>
                 All Bicycles
               </Link>
-              <Link
-                href="/about-us"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
+              <Link href="/about-us" className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive("/about-us")}`}>
                 About
               </Link>
             </div>
@@ -70,22 +65,13 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="pt-2 pb-3 space-y-1">
-            <Link
-              href="/"
-              className="block pl-3 pr-4 py-2 border-l-4 border-primary text-base font-medium text-primary bg-primary-foreground/10"
-            >
+            <Link href="/" className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${isActive("/")}`}>
               Home
             </Link>
-            <Link
-              href="/products"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
-            >
+            <Link href="/products" className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${isActive("/products")}`}>
               All Bicycles
             </Link>
-            <Link
-              href="/about-us"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
-            >
+            <Link href="/about-us" className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${isActive("/about-us")}`}>
               About
             </Link>
           </div>
@@ -108,4 +94,3 @@ export default function Navbar() {
     </nav>
   )
 }
-
