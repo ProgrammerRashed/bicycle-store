@@ -19,6 +19,7 @@ import {
 } from
 "@/components/ui/sidebar"
 import { User, Package, ShoppingCart, Users, Settings, LogOut, Home } from "lucide-react"
+import Image from "next/image"
 
 export default function DashboardLayout({
   children,
@@ -30,17 +31,17 @@ export default function DashboardLayout({
 
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen w-full">
         <Sidebar>
           <SidebarHeader className="border-b">
-            <div className="flex items-center p-4">
+            <div className="flex items-center px-4">
               <Link href="/" className="flex items-center gap-2 font-semibold">
-                <Package className="h-6 w-6" />
+                  <Image src="/logo.png" alt="Bicycle Store Logo" width={20} height={20} className="h-10 w-auto" />
                 <span>BikeHub</span>
               </Link>
             </div>
           </SidebarHeader>
-          <SidebarContent>
+          <SidebarContent className="px-4 py-2">
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard"}>
