@@ -71,7 +71,6 @@ const CheckoutPageInner = () => {
       return
     }
 
-    console.log("product", product)
     if (value > 0 && value <= product.stock) {
       setQuantity(value)
     }
@@ -136,7 +135,6 @@ const CheckoutPageInner = () => {
         setLoading(false)
         navigate("/payment/success")
       } catch (err: any) {
-        console.log(err)
         toast.error("Order could not be saved. Please try again.")
         setLoading(false)
 

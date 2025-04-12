@@ -24,7 +24,6 @@ const AdminDashboard = () => {
 
   const orders = orderResponse?.data || [];
 
-  console.log(orders)
 
   if (isLoading) {
     return (

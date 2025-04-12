@@ -31,7 +31,6 @@ const DashboardProductTable = ({setIsEditDialogOpen, setIsDeleteDialogOpen, setC
     isLoading,
   } = useGetAllProductsQuery("");
   const products: Product[] = productsResponse?.data || [];
-console.log("products", products)
 
 
   return (

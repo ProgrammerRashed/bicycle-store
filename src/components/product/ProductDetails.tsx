@@ -21,7 +21,6 @@ export default function BicycleDetailsPage() {
   } = useGetSingleProductQuery(id as string);
 
   const bicycle = productResponse?.data ?? null;
-  console.log(bicycle)
 
   if (isLoading) {
     return (

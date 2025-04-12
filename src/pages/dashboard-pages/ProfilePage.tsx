@@ -20,7 +20,9 @@ export default function ProfilePage() {
   const dispatch = useAppDispatch();
   const currentToken = useAppSelector(useCurrentToken);
   const [profileData, setProfileData] = useState({
+    // @ts-ignore
     firstName: user?.name?.split(" ")[0] || "",
+    // @ts-ignore
     lastName: user?.name?.split(" ")[1] || "",
     email: user?.email,
   })
@@ -106,7 +108,6 @@ export default function ProfilePage() {
     }
 
     try {
-      console.log(passwordData);
       await changePassword({
         currentPassword: passwordData.currentPassword,
         newPassword: passwordData.newPassword,

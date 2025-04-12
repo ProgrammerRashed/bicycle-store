@@ -27,7 +27,6 @@ const OrdersPage = () => {
     return order.user.email === user?.email;
   });
 
-  console.log(orders)
   const filteredOrders = orders.filter(
     (order: any) =>
       order.user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||

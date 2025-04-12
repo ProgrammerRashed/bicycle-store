@@ -106,10 +106,8 @@ const SignUp = () => {
     if (!validateForm()) return;
 
     try {
-      console.log("Form data:", formData);
       // Uncomment the following lines to enable the API call
       const response = await registerUser(formData).unwrap();
-      console.log("Response:", response);
       if (response.statusCode === 201) {
         toast.success("Registration successful!");
         navigate("/signin");
