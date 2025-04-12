@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 
 const NotFoundPage = () => {
@@ -13,9 +14,9 @@ const NotFoundPage = () => {
           ...maybe the page you're looking for is not found or never existed.
         </p>
         <Link to="/">
-          <button className="px-6 py-3 text-lg font-medium bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300">
-            Back to home <i className="far fa-hand-point-right ml-2"></i>
-          </button>
+          <Button className="px-6 py-3 text-lg font-medium bg-primary text-white rounded-lg shadow">
+            Back to home
+          </Button>
         </Link>
       </div>
     </div>
