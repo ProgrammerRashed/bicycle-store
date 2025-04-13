@@ -28,3 +28,5 @@ npm run dev
 ```
 
  You're all set! The frontend should now be up and running.
+
+ Here is the live link of the project: https://bicyle-store-front.vercel.app
