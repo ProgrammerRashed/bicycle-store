@@ -24,7 +24,7 @@ const AboutUsPage = () => {
           </Button>
         </div>
         <div className="relative h-[400px] rounded-lg overflow-hidden">
-          <img src="/products/product-1.webp" alt="BikeHub Store" className="object-cover" />
+          <img src="/about-banner.png" alt="BikeHub Store" className="object-cover" />
         </div>
       </div>
 
