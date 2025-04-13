@@ -140,25 +140,4 @@ const AdminDashboard = () => {
     </div>
   );
 };
-
-interface DashboardCardProps {
-  title: string;
-  value: number | string;
-  icon: React.ReactNode;
-}
-
-const DashboardCard: React.FC<DashboardCardProps> = ({
-  title,
-  value,
-  icon,
-}) => {
-  return (
-    <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-5 w-60 text-center border border-gray-200">
-      <div className="p-3 bg-gray-100 rounded-full mb-3">{icon}</div>
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <p className="text-2xl font-bold">{value}</p>
-    </div>
-  );
-};
-
 export default AdminDashboard;

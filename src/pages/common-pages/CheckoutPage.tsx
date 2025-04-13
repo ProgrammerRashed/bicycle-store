@@ -39,6 +39,7 @@ const CheckoutPageInner = () => {
   const [totalPrice, setTotalPrice] = useState(0)
   const [clientSecret, setClientSecret] = useState("")
   const [name, setName] = useState("")
+  // @ts-ignore
   const [email, setEmail] = useState(user?.email)
   const [loading, setLoading] = useState(false)
   const stripe = useStripe()
